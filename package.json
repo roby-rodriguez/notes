@@ -1,0 +1,22 @@
+{
+  "name": "Notes",
+  "namelower": "notes",
+  "version": "0.0.1",
+  "description": "Notes is a step-by-step MEAN fullstack-JavaScript tutorial.",
+  "main": "server.js",
+  "readme": "README.md",
+  "author": "RobyRodriguez",
+  "license": "MIT",
+  "bugs" : {
+    "url" : "https://github.com/roby-rodriguez/notes/issues"
+  },
+  "repository": {
+    "type"  : "git",
+    "url"   : "https://github.com/roby-rodriguez/notes.git"
+  },
+  "devDependencies": {
+    "express"           : "4.13.x",
+    "body-parser"       : "1.15.x",
+    "mongoose"          : "4.4.x"
+  }
+}
