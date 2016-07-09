@@ -18,6 +18,10 @@
     "express"           : "4.13.x",
     "morgan"            : "1.7.x",
     "body-parser"       : "1.15.x",
-    "mongoose"          : "4.4.x"
+    "mongoose"          : "4.4.x",
+    "serve-favicon"     : "2.3.x"
+  },
+  "scripts": {
+    "postinstall": "bower install"
   }
 }

@@ -1,0 +1,35 @@
+/** Additional styling rules to adapt the Hydrogen theme to work with Angular */
+.mfp-content h2 {
+    color: #ddd;
+}
+
+.mfp-content .mfp-close {
+    color: #fff;
+}
+
+.mfp-content .form-control {
+    background: #fff;
+    border: 2px solid #aaa;
+}
+
+.mfp-content .form-control:hover, .mfp-content .form-control:focus, .mfp-content .form-control:active {
+    outline: none;
+    box-shadow: none !important;
+    border: 2px solid #EF5353;
+}
+
+.mfp-content > .note-viewer {
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#fh5co-board .item {
+    cursor: pointer;
+}
+
+.icon-menu, .icon-cross {
+    cursor: pointer;
+}
