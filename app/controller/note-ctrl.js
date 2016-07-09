@@ -16,4 +16,16 @@ Controller.create = function (req, res) {
     });
 };
 
+Controller.read = function (req, res) {
+    Note.find(req.params, function (err, found) {
+        if (err) {
+            res.status(400);
+            res.json({ error: "Error finding " + JSON.stringify(req.params), message: err.toString() });
+        } else {
+            res.status(200);
+            res.json(found);
+        }
+    });
+};
+
 module.exports = Controller;
