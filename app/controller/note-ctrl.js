@@ -28,4 +28,18 @@ Controller.read = function (req, res) {
     });
 };
 
+Controller.update = function (req, res) {
+    var query = { _id: req.params.id };
+
+    Note.findOneAndUpdate(query, req.body, { new: true },function (err, found) {
+        if (err) {
+            res.status(400);
+            res.json({ error: "Error updating note with id=" + query._id, message: err.toString() });
+        } else {
+            res.status(200);
+            res.json(found);
+        }
+    });
+};
+
 module.exports = Controller;

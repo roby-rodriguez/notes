@@ -6,6 +6,7 @@ router
     .post('/note/create', NoteController.create)
     .get('/note/read', NoteController.read)
     .get('/note/read/:title', NoteController.read)
-    .get('/note/read/:title/:content', NoteController.read);
+    .get('/note/read/:title/:content', NoteController.read)
+    .put('/note/update/:id', NoteController.update);
 
 module.exports = router;
