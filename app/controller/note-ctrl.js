@@ -42,4 +42,18 @@ Controller.update = function (req, res) {
     });
 };
 
+Controller.delete = function (req, res) {
+    var query = { _id: req.params.id };
+
+    Note.remove(query, function (err) {
+        if (err) {
+            res.status(400);
+            res.json({ error: "Error deleting note with id=" + query._id, message: err.toString() });
+        } else {
+            res.status(200);
+            res.end();
+        }
+    });
+};
+
 module.exports = Controller;

@@ -7,6 +7,7 @@ router
     .get('/note/read', NoteController.read)
     .get('/note/read/:title', NoteController.read)
     .get('/note/read/:title/:content', NoteController.read)
-    .put('/note/update/:id', NoteController.update);
+    .put('/note/update/:id', NoteController.update)
+    .delete('/note/delete/:id', NoteController.delete);
 
 module.exports = router;
