@@ -1,0 +1,29 @@
+<div ng-include src="'templates/serverResponse.html'"></div>
+<div id="fh5co-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>Add new note</h2>
+                <div class="fh5co-spacer fh5co-spacer-sm"></div>
+                <form ng-submit="create()">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter title..." ng-model="note.title">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" value="Add">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

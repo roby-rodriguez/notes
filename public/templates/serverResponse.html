@@ -1,0 +1,14 @@
+<div class="container" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in" ng-show="infoMessage">
+                <a href="" ng-click="clearMessages()" class="close" data-dismiss="alert">&times;</a>
+                <strong>Success:</strong> {{ infoMessage }}
+            </div>
+            <div class="alert alert-danger fade in" ng-show="error">
+                <a href="" ng-click="clearMessages()" class="close" data-dismiss="alert">&times;</a>
+                <strong>Error:</strong> {{ error }} : {{ errorMessage }}
+            </div>
+        </div>
+    </div>
+</div>
