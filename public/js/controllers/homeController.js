@@ -9,6 +9,8 @@ angular.module('notesApp')
                     $rootScope.errorMessage = JSON.stringify(err);
                 } else {
                     $scope.notes = res;
+                    // when data ready, launch hydrogen theme
+                    $window.notesUI.initHome();
                 }
             });
         };
