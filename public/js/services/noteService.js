@@ -18,4 +18,13 @@ angular.module('notesApp')
                     next(err);
                 });
         };
+        this.updateNote = function (noteId, data, next) {
+            return $http.put('/note/update/' + noteId, data)
+                .success(function(info){
+                    next(null, info);
+                })
+                .error(function (err) {
+                    next(err);
+                });
+        };
 });

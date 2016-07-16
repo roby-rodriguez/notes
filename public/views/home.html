@@ -6,9 +6,10 @@
                 <div ng-repeat="note in notes track by $index">
                     <div class="item">
                         <div class="animate-box" waypoint>
-                            <a href="#{{ 'nt-viewer-' + $index }}" class="image-popup fh5co-board-img">
+                            <a href="#{{ 'nt-viewer-' + $index }}" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup>
                                 <img ng-src="{{ note.image }}">
                                 <div id="{{ 'nt-viewer-' + $index }}" class="note-viewer mfp-hide">
+                                    <div ng-include src="'templates/noteViewer.html'"></div>
                                 </div>
                             </a>
                         </div>

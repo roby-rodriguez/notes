@@ -1,5 +1,9 @@
 angular.module('notesApp')
-    .controller('HomeController', function($scope, $rootScope, $window, $injector, $timeout, NotesFactory) {
+    .controller('HomeController', function($scope, $rootScope, $window, $injector, $timeout, NotesFactory, NoteViewerFactory) {
+
+        $scope.setSelection = function (note) {
+            NoteViewerFactory.setNote(note)
+        };
 
         $scope.loadNotes = function () {
             // load user notes
