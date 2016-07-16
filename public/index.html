@@ -26,7 +26,10 @@
 </head>
 <body>
     <div ng-app="notesApp">
+        <div ng-include src="'templates/foldMenu.html'"></div>
+        <div ng-include src="'templates/header.html'"></div>
         <ng-view></ng-view>
+        <div ng-include src="'templates/footer.html'"></div>
     </div>
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -52,6 +55,8 @@
     <script src="js/controllers/homeController.js"></script>
     <script src="js/controllers/createController.js"></script>
     <script src="js/controllers/noteViewerController.js"></script>
+    <script src="js/controllers/headerController.js"></script>
+    <script src="js/controllers/foldMenuController.js"></script>
     <script src="js/controllers/serverResponseController.js"></script>
     <!-- Custom Angular Directives -->
     <script src="js/directives/waypoint.js"></script>
