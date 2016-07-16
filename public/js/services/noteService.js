@@ -27,4 +27,13 @@ angular.module('notesApp')
                     next(err);
                 });
         };
+        this.deleteNote = function (noteId, next) {
+            return $http.delete('/note/delete/' + noteId)
+                .success(function(info){
+                    next(null, info);
+                })
+                .error(function (err) {
+                    next(err);
+                });
+        };
 });

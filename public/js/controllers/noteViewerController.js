@@ -20,4 +20,24 @@ angular.module('notesApp')
                 }
             });
         };
+        $scope.delete = function () {
+            var selected = NoteViewerFactory.getNote();
+            NoteService.deleteNote(selected._id, function (err) {
+                if (err) {
+                    $rootScope.error = 'Could not delete note';
+                    $rootScope.errorMessage = JSON.stringify(err);
+                } else {
+                    $rootScope.infoMessage = 'Deleted note: ' + JSON.stringify(selected);
+                    NotesFactory.getNotes(function (err) {
+                        if (err) {
+                            $rootScope.error = 'Could not load notes';
+                            $rootScope.errorMessage = JSON.stringify(err);
+                        } else {
+                            $route.reload();
+                            $.magnificPopup.instance.close();
+                        }
+                    })
+                }
+            });
+        };
 });
