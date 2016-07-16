@@ -9,4 +9,13 @@ angular.module('notesApp')
                     next(err);
                 });
         };
+        this.readNotes = function (next) {
+            return $http.get('/note/read')
+                .success(function(notes){
+                    next(null, notes);
+                })
+                .error(function (err) {
+                    next(err);
+                });
+        };
 });
