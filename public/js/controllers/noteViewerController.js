@@ -8,15 +8,7 @@ angular.module('notesApp')
                     $rootScope.errorMessage = JSON.stringify(err);
                 } else {
                     $rootScope.infoMessage = 'Updated note: ' + JSON.stringify(res);
-                    NotesFactory.getNotes(function (err) {
-                        if (err) {
-                            $rootScope.error = 'Could not load notes';
-                            $rootScope.errorMessage = JSON.stringify(err);
-                        } else {
-                            $route.reload();
-                            $.magnificPopup.instance.close();
-                        }
-                    })
+					$.magnificPopup.instance.close();
                 }
             });
         };
@@ -28,15 +20,8 @@ angular.module('notesApp')
                     $rootScope.errorMessage = JSON.stringify(err);
                 } else {
                     $rootScope.infoMessage = 'Deleted note: ' + JSON.stringify(selected);
-                    NotesFactory.getNotes(function (err) {
-                        if (err) {
-                            $rootScope.error = 'Could not load notes';
-                            $rootScope.errorMessage = JSON.stringify(err);
-                        } else {
-                            $route.reload();
-                            $.magnificPopup.instance.close();
-                        }
-                    })
+					$route.reload();
+					$.magnificPopup.instance.close();
                 }
             });
         };
