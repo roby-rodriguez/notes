@@ -31,7 +31,17 @@ mongoose.connect('mongodb://localhost/notes', function (err) {
     else console.log("Database started at " + new Date())
 });
 
+// prevent server crashes
+process.on('uncaughtException', function (err) {
+	console.log("Uncaught exception at " + new Date());
+	console.error(err);
+});
+
+// setup defaults if existing
+process.env.PORT = process.env.PORT || 1337;
+process.env.IP = process.env.IP || 'localhost';
+
 // start server
-app.listen(1337, 'localhost', function () {
+app.listen(process.env.PORT, process.env.IP, function () {
     console.log("Server started at " + new Date())
 });
