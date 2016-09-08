@@ -2,7 +2,7 @@ angular.module('notesApp')
     .controller('HomeController', function($scope, $rootScope, $window, NotesFactory, NoteViewerFactory) {
 
         $scope.setSelection = function (note) {
-            NoteViewerFactory.setNote(note)
+            NoteViewerFactory.setNote(note);
         };
 
         $scope.loadNotes = function () {

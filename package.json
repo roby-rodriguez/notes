@@ -14,12 +14,37 @@
     "type"  : "git",
     "url"   : "https://github.com/roby-rodriguez/notes.git"
   },
-  "devDependencies": {
+  "dependencies": {
     "express"           : "4.13.x",
     "morgan"            : "1.7.x",
     "body-parser"       : "1.15.x",
     "mongoose"          : "4.4.x",
-    "serve-favicon"     : "2.3.x"
+    "serve-favicon"     : "2.3.x",
+	"compression"		: "1.6.x"
+  },
+  "devDependencies": {
+    "express"           	: "4.13.x",
+    "morgan"            	: "1.7.x",
+    "body-parser"       	: "1.15.x",
+    "mongoose"          	: "4.4.x",
+    "serve-favicon"     	: "2.3.x",
+    "grunt"             	: "~1.0.1",
+    "grunt-contrib-sass"	: "~1.0.0",
+    "cheerio"           	: "~0.19.0",
+	"grunt-contrib-copy"	: "~1.0.0",
+	"grunt-scss-lint"		: "~0.5.0",
+	"grunt-contrib-jshint"	: "~1.0.0",
+	"grunt-contrib-concat"	: "~1.0.1",
+	"grunt-contrib-clean"	: "~1.0.0",
+	"grunt-contrib-uglify"	: "~2.0.0",
+	"grunt-ng-annotate"		: "~2.0.2",
+	"grunt-uncss"			: "~0.6.1",
+	"grunt-contrib-cssmin"	: "~1.0.1",
+	"grunt-text-replace"	: "~0.4.0",
+	"grunt-contrib-imagemin": "~1.0.1",
+	"grunt-contrib-watch"	: "~1.0.0",
+	"grunt-concurrent"		: "~2.3.1",
+	"lodash"				: "~4.15.0"
   },
   "scripts": {
     "postinstall": "bower install"

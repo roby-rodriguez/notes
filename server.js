@@ -4,20 +4,25 @@ var logger          = require('morgan');
 var bodyParser      = require('body-parser');
 var mongoose        = require('mongoose');
 var favicon         = require('serve-favicon');
+var compression     = require('compression');
 // setup express
 var app             = express();
+// setup cache timeout
+var aWeek = 7 * 24 * 60 * 60 * 1000;
 
 // use logger
 app.use(logger('dev'));
+// compress all requests
+app.use(compression());
 // use middleware to parse application/json
 app.use(bodyParser.json());
 // use custom router
 app.use('/', require('./app/route/note-rt'));
-// set the static files location /public/img will be /img for users
-app.use(express.static(__dirname + '/public'));
+// set the static files location /dist/img will be /img for users
+app.use(express.static(__dirname + '/dist', { maxAge: aWeek }));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 // set express to serve libraries from bower standard directory
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use('/bower_components',  express.static(__dirname + '/bower_components', { maxAge: aWeek }));
 // if no route matched so far reply with 404
 app.use(function (req, res, next) {
     var err = new Error('Not found');

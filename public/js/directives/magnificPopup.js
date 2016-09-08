@@ -32,7 +32,7 @@ angular.module('notesApp')
                 // enable click on note text
                 element.parent().parent().click(function () {
                     element.click();
-                })
+                });
             }
         };
     });

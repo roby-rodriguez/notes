@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost:1337/#/home -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes Showcase</title>
+    <!-- Google Webfonts
+    <link href="./foldMenu_files/css" rel="stylesheet" type="text/css">
+    <link href="./foldMenu_files/css(1)" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./foldMenu_files/style.css"> -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+<style>[data-columns]::before{display:block;visibility:hidden;position:absolute;font-size:1px;}</style><style>[data-columns]::before{display:block;visibility:hidden;position:absolute;font-size:1px;}</style></head>
+<body data-pinterest-extension-installed="cr1.39.2">
+    <div ng-app="notesApp" class="ng-scope">
+        <!-- ngInclude: --><div ng-include="" src="&#39;templates/foldMenu.html&#39;" class="ng-scope"><div id="fh5co-offcanvass" ng-controller="FoldMenuController" class="ng-scope fh5co-awake">
+    <a class="fh5co-offcanvass-close">Menu <i class="icon-cross js-fh5co-offcanvass-close"></i> </a>
+    <h1 class="fh5co-logo"><a class="navbar-brand" href="http://localhost:1337/index.html">Notes</a></h1>
+    <ul class="fh5co-fold-menu">
+        <li ng-class="{active: isActive(&#39;/home&#39;)}" class="active"><a href="http://localhost:1337/#/home">Home</a></li>
+        <li ng-class="{active: isActive(&#39;/create&#39;)}"><a href="http://localhost:1337/#/create">Create</a></li>
+    </ul>
+    <h3 class="fh5co-lead">Connect with us</h3>
+    <p class="fh5co-social-icons">
+        <a href="http://localhost:1337/#"><i class="icon-twitter"></i></a>
+        <a href="http://localhost:1337/#"><i class="icon-facebook"></i></a>
+        <a href="http://localhost:1337/#"><i class="icon-instagram"></i></a>
+        <a href="http://localhost:1337/#"><i class="icon-dribbble"></i></a>
+        <a href="http://localhost:1337/#"><i class="icon-youtube"></i></a>
+    </p>
+</div>
+</div>
+        <!-- ngInclude: --><div ng-include="" src="&#39;templates/header.html&#39;" class="ng-scope"><header id="fh5co-header" role="banner" ng-controller="HeaderController" class="ng-scope">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
+                <a class="navbar-brand" href="http://localhost:1337/#/home">Notes</a>
+            </div>
+        </div>
+    </div>
+</header>
+</div>
+        <!-- ngView: --><ng-view class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="fh5co-main" class="ng-scope">
+    <div class="container">
+        <div class="row">
+            <div id="fh5co-board" data-columns="4"><div class="column size-1of4"><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box bounceIn animated" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-0" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_9.jpg" src="./foldMenu_files/img_9.jpg">
+                                <div id="nt-viewer-0" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 9</div>
+                        <div class="fh5co-desc ng-binding">Nesciunt non iste ex nemo sapiente eum, provident nam corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-4" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_18.jpg" src="./foldMenu_files/img_18.jpg">
+                                <div id="nt-viewer-4" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 18</div>
+                        <div class="fh5co-desc ng-binding">Unde iure rerum cupiditate explicabo quam aut vel earum numquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-8" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_22.jpg" src="./foldMenu_files/img_22.jpg">
+                                <div id="nt-viewer-8" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 22</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-12" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_26.jpg" src="./foldMenu_files/img_26.jpg">
+                                <div id="nt-viewer-12" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 26</div>
+                        <div class="fh5co-desc ng-binding">Quos repellendus repudiandae debitis reprehenderit cupiditate cumque accusamus exercitationem, harumt. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-16" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_29_large.jpg" src="./foldMenu_files/img_29_large.jpg">
+                                <div id="nt-viewer-16" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 29_large</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-20" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img>
+                                <div id="nt-viewer-20" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">tetjk</div>
+                        <div class="fh5co-desc ng-binding">tuk</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-24" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_4.jpg" src="./foldMenu_files/img_4.jpg">
+                                <div id="nt-viewer-24" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 4</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-28" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_8.jpg" src="./foldMenu_files/img_8.jpg">
+                                <div id="nt-viewer-28" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 8</div>
+                        <div class="fh5co-desc ng-binding">Neque porro vero cumque natus nam voluptatibus, ratione, commodi labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div></div><div class="column size-1of4"><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box bounceIn animated" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-1" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_10.jpg" src="./foldMenu_files/img_10.jpg">
+                                <div id="nt-viewer-1" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 10</div>
+                        <div class="fh5co-desc ng-binding">Unde iure rerum cupiditate explicabo quam aut vel earum numquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos? tj</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-5" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_19.jpg" src="./foldMenu_files/img_19.jpg">
+                                <div id="nt-viewer-5" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 19</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-9" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_23.jpg" src="./foldMenu_files/img_23.jpg">
+                                <div id="nt-viewer-9" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 23</div>
+                        <div class="fh5co-desc ng-binding">Neque porro vero cumque natus nam voluptatibus, ratione, commodi labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-13" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_27.jpg" src="./foldMenu_files/img_27.jpg">
+                                <div id="nt-viewer-13" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 27</div>
+                        <div class="fh5co-desc ng-binding">Nesciunt non iste ex nemo sapiente eum, provident nam corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-17" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_30.jpg" src="./foldMenu_files/img_30.jpg">
+                                <div id="nt-viewer-17" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 30</div>
+                        <div class="fh5co-desc ng-binding">Quos repellendus repudiandae debitis reprehenderit cupiditate cumque accusamus exercitationem, harumt. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-21" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_1.jpg" src="./foldMenu_files/img_1.jpg">
+                                <div id="nt-viewer-21" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 1</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-25" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_5.jpg" src="./foldMenu_files/img_5.jpg">
+                                <div id="nt-viewer-25" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 5</div>
+                        <div class="fh5co-desc ng-binding">Unde iure rerum cupiditate explicabo quam aut vel earum numquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div></div><div class="column size-1of4"><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box bounceIn animated" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-2" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_16.jpg" src="./foldMenu_files/img_16.jpg">
+                                <div id="nt-viewer-2" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 16</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos? htehw</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-6" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_20.jpg" src="./foldMenu_files/img_20.jpg">
+                                <div id="nt-viewer-6" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 20</div>
+                        <div class="fh5co-desc ng-binding">Unde iure rerum cupiditate explicabo quam aut vel earum numquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-10" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_24.jpg" src="./foldMenu_files/img_24.jpg">
+                                <div id="nt-viewer-10" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 24</div>
+                        <div class="fh5co-desc ng-binding">Nesciunt non iste ex nemo sapiente eum, provident nam corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-14" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_28.jpg" src="./foldMenu_files/img_28.jpg">
+                                <div id="nt-viewer-14" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 28</div>
+                        <div class="fh5co-desc ng-binding">Neque porro vero cumque natus nam voluptatibus, ratione, commodi labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-18" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img>
+                                <div id="nt-viewer-18" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">bla bla</div>
+                        <div class="fh5co-desc ng-binding">blaaaaaaa</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-22" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_2.jpg" src="./foldMenu_files/img_2.jpg">
+                                <div id="nt-viewer-22" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 2</div>
+                        <div class="fh5co-desc ng-binding">Magni repellendus iusto mollitia, quibusdam facilis incidunt. Sunt, repellat, voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-26" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_6.jpg" src="./foldMenu_files/img_6.jpg">
+                                <div id="nt-viewer-26" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 6</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div></div><div class="column size-1of4"><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box bounceIn animated" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-3" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_17.jpg" src="./foldMenu_files/img_17.jpg">
+                                <div id="nt-viewer-3" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 17</div>
+                        <div class="fh5co-desc ng-binding">Magni repellendus iusto mollitia, quibusdam facilis incidunt. Sunt, repellat, voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-7" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_21.jpg" src="./foldMenu_files/img_21.jpg">
+                                <div id="nt-viewer-7" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 21</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-11" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_25.jpg" src="./foldMenu_files/img_25.jpg">
+                                <div id="nt-viewer-11" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 25</div>
+                        <div class="fh5co-desc ng-binding">Unde iure rerum cupiditate explicabo quam aut vel earum numquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-15" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_29.jpg" src="./foldMenu_files/img_29.jpg">
+                                <div id="nt-viewer-15" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 29</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-19" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img>
+                                <div id="nt-viewer-19" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">wgwr</div>
+                        <div class="fh5co-desc ng-binding">gwrgrw</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-23" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_3.jpg" src="./foldMenu_files/img_3.jpg">
+                                <div id="nt-viewer-23" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 3</div>
+                        <div class="fh5co-desc ng-binding">Unde iure rerum cupiditate explicabo quam aut vel earum numquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div><div ng-repeat="note in notes track by $index" class="ng-scope">
+                    <div class="item">
+                        <div class="animate-box" waypoint="">
+                            <a href="http://localhost:1337/#nt-viewer-27" ng-click="setSelection(note)" class="image-popup fh5co-board-img" magnific-popup="">
+                                <img ng-src="images/img_7.jpg" src="./foldMenu_files/img_7.jpg">
+                                <div id="nt-viewer-27" class="note-viewer mfp-hide">
+                                    <!-- ngInclude: --><div ng-include="" src="&#39;templates/noteViewer.html&#39;" class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ng-scope" ng-controller="NoteViewerController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Note viewer</h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form ng-submit="update()" class="ng-pristine ng-valid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter title..." ng-model="note.title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-floppy-disk"></i> Update
+                            </button>
+                            <button type="button" ng-click="delete()" class="btn btn-danger">
+                                <i class="icon-bin"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fh5co-item-title ng-binding">Note title 7</div>
+                        <div class="fh5co-desc ng-binding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+                    </div>
+                </div></div></div>
+        </div>
+    </div>
+</div>
+</ng-view>
+        <!-- ngInclude: --><div ng-include="" src="&#39;templates/footer.html&#39;" class="ng-scope"><footer id="fh5co-footer" class="ng-scope">
+    <div class="container">
+        <div class="row row-padded">
+            <div class="col-md-12 text-center">
+                <p class="fh5co-social-icons">
+                    <a href="http://localhost:1337/#"><i class="icon-twitter"></i></a>
+                    <a href="http://localhost:1337/#"><i class="icon-facebook"></i></a>
+                    <a href="http://localhost:1337/#"><i class="icon-instagram"></i></a>
+                    <a href="http://localhost:1337/#"><i class="icon-dribbble"></i></a>
+                    <a href="http://localhost:1337/#"><i class="icon-youtube"></i></a>
+                </p>
+                <p><small>© Hydrogen Free HTML5 Template. All Rights Reserved. <br>Designed by: <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a></small></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+	<script src="./foldMenu_files/app.js"></script>
+
+
+</body></html>

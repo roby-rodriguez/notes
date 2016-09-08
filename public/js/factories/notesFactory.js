@@ -7,8 +7,8 @@ angular.module('notesApp')
                 if (next) {
                     NoteService.readNotes(function (err, res) {
                         notes = res;
-                        next(err, res)
-                    })
+                        next(err, res);
+                    });
                 }
                 return notes;
             }

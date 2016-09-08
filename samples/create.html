@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:1337/#/create -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes Showcase</title>
+    <!-- Google Webfonts
+    <link href="./create_files/css" rel="stylesheet" type="text/css">
+    <link href="./create_files/css(1)" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./create_files/style.css"> -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+<style>[data-columns]::before{display:block;visibility:hidden;position:absolute;font-size:1px;}</style><style>[data-columns]::before{display:block;visibility:hidden;position:absolute;font-size:1px;}</style></head>
+<body data-pinterest-extension-installed="cr1.39.2">
+    <div ng-app="notesApp" class="ng-scope">
+        <!-- ngInclude: --><div ng-include="" src="&#39;templates/foldMenu.html&#39;" class="ng-scope"><div id="fh5co-offcanvass" ng-controller="FoldMenuController" class="ng-scope">
+    <a class="fh5co-offcanvass-close">Menu <i class="icon-cross js-fh5co-offcanvass-close"></i> </a>
+    <h1 class="fh5co-logo"><a class="navbar-brand" href="http://localhost:1337/index.html">Notes</a></h1>
+    <ul class="fh5co-fold-menu">
+        <li ng-class="{active: isActive(&#39;/home&#39;)}" class=""><a href="http://localhost:1337/#/home">Home</a></li>
+        <li ng-class="{active: isActive(&#39;/create&#39;)}" class="active"><a href="http://localhost:1337/#/create">Create</a></li>
+    </ul>
+    <h3 class="fh5co-lead">Connect with us</h3>
+    <p class="fh5co-social-icons">
+        <a href="http://localhost:1337/#"><i class="icon-twitter"></i></a>
+        <a href="http://localhost:1337/#"><i class="icon-facebook"></i></a>
+        <a href="http://localhost:1337/#"><i class="icon-instagram"></i></a>
+        <a href="http://localhost:1337/#"><i class="icon-dribbble"></i></a>
+        <a href="http://localhost:1337/#"><i class="icon-youtube"></i></a>
+    </p>
+</div>
+</div>
+        <!-- ngInclude: --><div ng-include="" src="&#39;templates/header.html&#39;" class="ng-scope"><header id="fh5co-header" role="banner" ng-controller="HeaderController" class="ng-scope">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
+                <a class="navbar-brand" href="http://localhost:1337/#/home">Notes</a>
+            </div>
+        </div>
+    </div>
+</header>
+</div>
+        <!-- ngView: --><ng-view class="ng-scope"><!-- ngInclude: --><div ng-include="" src="&#39;templates/serverResponse.html&#39;" class="ng-scope"><div class="container ng-scope" ng-controller="ServerResponseController">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="alert alert-success fade in ng-binding ng-hide" ng-show="infoMessage">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Success:</strong> 
+            </div>
+            <div class="alert alert-danger fade in ng-binding ng-hide" ng-show="error">
+                <a href="http://localhost:1337/" ng-click="clearMessages()" class="close" data-dismiss="alert">×</a>
+                <strong>Error:</strong>  : 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="fh5co-main" class="ng-scope">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>Add new note</h2>
+                <div class="fh5co-spacer fh5co-spacer-sm"></div>
+                <form ng-submit="create()" class="ng-pristine ng-valid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Enter title..." ng-model="note.title">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Enter (optional) image URL..." ng-model="note.image">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control ng-pristine ng-untouched ng-valid ng-empty" cols="30" rows="10" placeholder="Enter content..." ng-model="note.content"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" value="Add">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</ng-view>
+        <!-- ngInclude: --><div ng-include="" src="&#39;templates/footer.html&#39;" class="ng-scope"><footer id="fh5co-footer" class="ng-scope">
+    <div class="container">
+        <div class="row row-padded">
+            <div class="col-md-12 text-center">
+                <p class="fh5co-social-icons">
+                    <a href="http://localhost:1337/#"><i class="icon-twitter"></i></a>
+                    <a href="http://localhost:1337/#"><i class="icon-facebook"></i></a>
+                    <a href="http://localhost:1337/#"><i class="icon-instagram"></i></a>
+                    <a href="http://localhost:1337/#"><i class="icon-dribbble"></i></a>
+                    <a href="http://localhost:1337/#"><i class="icon-youtube"></i></a>
+                </p>
+                <p><small>© Hydrogen Free HTML5 Template. All Rights Reserved. <br>Designed by: <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a></small></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+	<script src="./create_files/app.js"></script>
+
+
+</body></html>

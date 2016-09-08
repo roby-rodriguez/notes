@@ -47,5 +47,5 @@ window.notesUI = (function () {
             // this hack is needed to get allow angular finish its housekeeping
             setTimeout(window.salvattore.init, 0);
         }
-    }
+    };
 }());

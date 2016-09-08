@@ -1,0 +1,130 @@
+{
+  "sass": {
+	"src": "public/css/style.scss",
+	"dest": "public/css/style.css"
+  },
+  "uglify": {
+	"src": "dist/js/app.js",
+	"dest": "dist/js/app.min.js"
+  },
+  "cssmin": {
+	"src": "dist/css/style.css",
+	"dest": "dist/css/style.min.css"
+  },
+  "concat": {
+	"js": "dist/js/app.js",
+	"css": "dist/css/style.css"
+  },
+  "replace": {
+	"fix_css_sourcemap": {
+	  "src": "dist/css/style.min.css.map",
+	  "from": "dist/css/style.css",
+	  "to": "style.css"
+	}
+  },
+  "index.html": {
+	"src": "public/index.html",
+	"dest": "dist/index.html",
+	"prod": {
+	  "css": {
+		"min": { "value": "css/style.min.css" }
+	  },
+	  "js": {
+		"min": { "value": "js/app.min.js" }
+	  }
+	},
+	"dev": {
+	  "css": {
+		"animate.css": {
+		  "comment": "Animate.css",
+		  "value": "bower_components/animate.css/animate.css"
+		},
+		"icomoon": {
+		  "comment": "Icomoon Icon Fonts",
+		  "value": "bower_components/icomoon-bower/style.css"
+		},
+		"magnific-popup": {
+		  "comment": "Magnific Popup",
+		  "value": "bower_components/magnific-popup/dist/magnific-popup.css"
+		},
+		"salvattore": {
+		  "comment": "Salvattore",
+		  "value": "css/salvattore.css"
+		},
+		"main": {
+		  "comment": "Main Theme Style - Includes Bootstrap CSS",
+		  "value": "css/style.css"
+		}
+	  },
+	  "js": {
+		"jQuery": {
+		  "comment": "jQuery",
+		  "value": "bower_components/jquery/dist/jquery.js"
+		},
+		"jQuery.easing": {
+		  "comment": "jQuery Easing",
+		  "value": "bower_components/jquery.easing/js/jquery.easing.js"
+		},
+		"Bootstrap": {
+		  "comment": "Bootstrap",
+		  "value": "bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"
+		},
+		"Modernizr": {
+		  "comment": "Modernizr",
+		  "value": "bower_components/modernizr/modernizr.js"
+		},
+		"jQuery.waypoints": {
+		  "comment": "jQuery Waypoints",
+		  "value": "bower_components/waypoints/lib/jquery.waypoints.js"
+		},
+		"jQuery.magnific-popup": {
+		  "comment": "jQuery Magnific Popup",
+		  "value": "bower_components/magnific-popup/dist/jquery.magnific-popup.js"
+		},
+		"Salvattore": {
+		  "comment": "jQuery Salvattore",
+		  "value": "bower_components/salvattore/dist/salvattore.js"
+		},
+		"main.js": {
+		  "comment": "Main JS",
+		  "value": "js/main.js"
+		},
+		"Angular.js": {
+		  "comment": "Angular Core",
+		  "value": "bower_components/angular/angular.js"
+		},
+		"Angular-route": {
+		  "comment": "Angular Routing",
+		  "value": "bower_components/angular-route/angular-route.js"
+		},
+		"app.js": {
+		  "comment": "Custom Angular App Routing & Configuration",
+		  "value": "js/app.js"
+		},
+		"homeController": {
+		  "comment": "Custom Angular Controllers",
+		  "value": "js/controllers/homeController.js"
+		},
+		"createController": { "value": "js/controllers/createController.js" },
+		"noteViewerController": { "value": "js/controllers/noteViewerController.js" },
+		"headerController": { "value": "js/controllers/headerController.js" },
+		"foldMenuController": { "value": "js/controllers/foldMenuController.js" },
+		"serverResponseController": { "value": "js/controllers/serverResponseController.js" },
+		"waypointDirective": {
+		  "comment": "Custom Angular Directives",
+		  "value": "js/directives/waypoint.js"
+		},
+		"magnificPopupDirective": { "value": "js/directives/magnificPopup.js" },
+		"noteViewerFactory": {
+		  "comment": "Custom Angular Factories",
+		  "value": "js/factories/noteViewerFactory.js"
+		},
+		"notesFactory": { "value": "js/factories/notesFactory.js" },
+		"noteService": {
+		  "comment": "Custom Angular Services",
+		  "value": "js/services/noteService.js"
+		}
+	  }
+	}
+  }
+}
